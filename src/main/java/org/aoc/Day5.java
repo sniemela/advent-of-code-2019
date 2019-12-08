@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 
 public class Day5 {
 
@@ -15,8 +17,14 @@ public class Day5 {
         System.out.println("Part 1 = " + interp(1, Arrays.copyOf(code, code.length)));
         System.out.println("Part 2 = " + interp(5, Arrays.copyOf(code, code.length)));
     }
+    
+    public static int interp(int input, int[] code) {
+        var inputs = new ArrayDeque<Integer>();
+        inputs.push(input);
+        return interp(inputs, code);
+    }
 
-    public static int interp(int noun, int[] code) {
+    public static int interp(Deque<Integer> inputs, int[] code) {
         int ip = 0;
         int output = 0;
 
@@ -48,13 +56,12 @@ public class Day5 {
                 break;
             }
             case 3: {
-                code[code[ip + 1]] = noun;
+                code[code[ip + 1]] = inputs.isEmpty() ? getValue(code, ip + 1, m1) : inputs.poll();
                 ip += 2;
                 break;
             }
             case 4: {
                 output = getValue(code, ip + 1, m1);
-                System.out.println(output);
                 ip += 2;
                 break;
             }
