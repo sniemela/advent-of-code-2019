@@ -1,6 +1,6 @@
 package org.aoc;
 
-public class Day4 {
+public class Day04 {
 
     public static void main(String[] args) {
         System.out.println("Part 1 = " + part1());

@@ -10,10 +10,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Day6 {
+public class Day06 {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        List<String> map = Files.readAllLines(Path.of(Day6.class.getResource("day6/input.txt").toURI()));
+        List<String> map = Files.readAllLines(Path.of(Day06.class.getResource("day06/input.txt").toURI()));
         
         System.out.println("Part 1 = " + part1(map));
         System.out.println("Part 2 = " + part2(map));

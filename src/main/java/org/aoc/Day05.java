@@ -9,10 +9,10 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
 
-public class Day5 {
+public class Day05 {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        String fileContent = Files.readString(Path.of(Day5.class.getResource("day5/input.txt").toURI()));
+        String fileContent = Files.readString(Path.of(Day05.class.getResource("day05/input.txt").toURI()));
         long[] code = Arrays.stream(fileContent.split("\\,")).mapToLong(Long::parseLong).toArray();
         
         System.out.println("Part 1 = " + interp(1, Arrays.copyOf(code, code.length)));

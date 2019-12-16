@@ -11,21 +11,21 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class Day6Test {
+public class Day06Test {
     
     @Test
     public void testPar1() {
-        assertEquals(42, Day6.part1(getMap("part1.txt")));
+        assertEquals(42, Day06.part1(getMap("part1.txt")));
     }
     
     @Test
     public void testPart2() {
-        assertEquals(4, Day6.part2(getMap("part2.txt")));
+        assertEquals(4, Day06.part2(getMap("part2.txt")));
     }
 
     private List<String> getMap(String file) {
         try {
-            return Files.readAllLines(Path.of(Day6Test.class.getResource("day6/" + file).toURI()));
+            return Files.readAllLines(Path.of(Day06Test.class.getResource("day06/" + file).toURI()));
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

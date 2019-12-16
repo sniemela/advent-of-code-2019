@@ -8,12 +8,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Day1 {
+public class Day01 {
 
     public static void main(String[] args) throws URISyntaxException, IOException {
-        List<Integer> moduleMasses = getModuleMasses(Path.of(Day1.class.getResource("day1/input.txt").toURI()));
+        List<Integer> moduleMasses = getModuleMasses(Path.of(Day01.class.getResource("day01/input.txt").toURI()));
 
-        Day1 day1 = new Day1();
+        Day01 day1 = new Day01();
 
         System.out.println("Part 1 = " + day1.part1(moduleMasses));
         System.out.println("Part 2 = " + day1.part2(moduleMasses));

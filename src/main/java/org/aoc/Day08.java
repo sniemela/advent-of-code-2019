@@ -6,10 +6,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 
-public class Day8 {
+public class Day08 {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        String imageData = Files.readString(Path.of(Day8.class.getResource("day8/input.txt").toURI()));
+        String imageData = Files.readString(Path.of(Day08.class.getResource("day08/input.txt").toURI()));
         
         System.out.println("Part 1 = " + part1(25, 6, imageData));
         System.out.println("Part 2 = \n" + part2(25, 6, imageData));

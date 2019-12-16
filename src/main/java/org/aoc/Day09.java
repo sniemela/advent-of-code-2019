@@ -7,10 +7,10 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Day9 {
+public class Day09 {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        String fileContent = Files.readString(Path.of(Day9.class.getResource("day9/input.txt").toURI()));
+        String fileContent = Files.readString(Path.of(Day09.class.getResource("day09/input.txt").toURI()));
         long[] code = Arrays.stream(fileContent.split("\\,")).mapToLong(Long::parseLong).toArray();
         
         System.out.println("Part 1 = " + part1(code));
@@ -26,7 +26,7 @@ public class Day9 {
     }
     
     public static long run(int input, long[] code) {
-        var computer = new Day5.IntCodeComputer(code);
+        var computer = new Day05.IntCodeComputer(code);
         long output = 0;
         
         computer.addInput(input);
@@ -39,7 +39,7 @@ public class Day9 {
     }
     
     public static long[] run(long[] code) {
-        var computer = new Day5.IntCodeComputer(code);
+        var computer = new Day05.IntCodeComputer(code);
         var output = new ArrayList<Long>();
         
         while (computer.run() != 99) {

@@ -7,10 +7,10 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 
-public class Day7 {
+public class Day07 {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        String fileContent = Files.readString(Path.of(Day5.class.getResource("day7/input.txt").toURI()));
+        String fileContent = Files.readString(Path.of(Day05.class.getResource("day07/input.txt").toURI()));
         long[] code = Arrays.stream(fileContent.split("\\,")).mapToLong(Long::parseLong).toArray();
         
         System.out.println("Part 1 = " + part1(code));
@@ -28,7 +28,7 @@ public class Day7 {
             
             for (int j = 0; j < 5; j++) {
                 List<Integer> inputs = Arrays.asList(permutations[i + j], outputSignal);
-                outputSignal = (int) Day5.interp(inputs, Arrays.copyOf(code, code.length));
+                outputSignal = (int) Day05.interp(inputs, Arrays.copyOf(code, code.length));
             }
             
             if (outputSignal > maxSignal) {
@@ -64,10 +64,10 @@ public class Day7 {
     }
     
     public static int runPhase(int[] phaseSettings, long[] code) {
-        var computers = new Day5.IntCodeComputer[5];
+        var computers = new Day05.IntCodeComputer[5];
         
         for (int i = 0; i < 5; i++) {
-            var comp = new Day5.IntCodeComputer(Arrays.copyOf(code, code.length));
+            var comp = new Day05.IntCodeComputer(Arrays.copyOf(code, code.length));
             comp.addInput(phaseSettings[i]);
             computers[i] = comp;
         }

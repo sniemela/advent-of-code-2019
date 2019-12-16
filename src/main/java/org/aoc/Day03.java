@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class Day3 {
+public class Day03 {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        List<String> wires = Files.readAllLines(Path.of(Day3.class.getResource("day3/input.txt").toURI()));
+        List<String> wires = Files.readAllLines(Path.of(Day03.class.getResource("day03/input.txt").toURI()));
         
         System.out.println("Part 1 = " + part1(wires.get(0), wires.get(1)));
         System.out.println("Part 2 = " + part2(wires.get(0), wires.get(1)));
