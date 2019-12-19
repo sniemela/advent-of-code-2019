@@ -55,6 +55,11 @@ public class Day05 {
         public void addInput(int input) {
             inputs.add(input);
         }
+        
+        public void setInputs(List<Integer> list) {
+            inputs.clear();
+            inputs.addAll(list);
+        }
 
         public long getOutput() {
             return output;
